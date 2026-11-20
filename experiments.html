@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Cass Adefuin's portfolio">
+	<meta name="keywords" content="HTML">
+	<meta name="author" content="Cass Adefuin">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cass Adefuin</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        article { border: 1px solid grey; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cass Adefuin - Experiments</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/GameDev/">Game Dev</a></li>
+                <li><a href="/WebDev/">Web Dev</a></li>
+                <li><a href="/Graphics/">Graphics</a></li>
+                <li><a href="/experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <template>
+            <p>You found a secret!</p>
+        </template>
+
+        <br>
+
+        <h2>Simple Folds by Pretty Patterns (Cover)</h2>
+        <br>
+        <audio controls autoplay loop>
+            <source src="Public/simple-folds-cover.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <br>
+
+        <h2>teeny tiny factory Demo</h2>
+        <br>
+        <video controls autoplay loop>
+            <source src="GameDev/teenytinyfactory/Media/teeny-tiny-factory-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <br>
+
+        <h2>Experimental Canvas</h2>
+        <br>
+        <canvas width="200" height="100" style="border:1px solid #000000;" id="canvas-sample">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+
+        <script>
+            const canvas = document.getElementById('canvas-sample');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'black';
+            ctx.fillRect(10, 10, 180, 80);
+        </script>
+    </main>
+
+    <footer>
+        <form action="submit">
+            <fieldset>
+                <legend>Send me a message:</legend>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <br>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"></textarea>
+                <br>
+                <button>Send</button>
+            </fieldset>
+        </form>
+    </footer>
+</body>

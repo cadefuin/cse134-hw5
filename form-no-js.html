@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Cass Adefuin's portfolio">
+	<meta name="keywords" content="HTML">
+	<meta name="author" content="Cass Adefuin">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cass Adefuin</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+    <header>
+        <svg class="menu_button" aria-label="Menu" display="none"
+            width="3rem"
+            height="3rem"
+            viewBox="0 0 105.83333 105.83333"
+            version="1.1">
+            <path
+                id="path1-5"
+                style="fill:none;stroke:#ffffff;stroke-width:5.84435;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+                d="M 24.276555,79.76011 H 81.556778 M 24.276553,52.916665 H 81.556779 M 24.276552,26.073221 h 57.280227" />
+        </svg>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/GameDev/">Game Dev</a></li>
+                <li><a href="/WebDev/">Web Dev</a></li>
+                <li><a href="/Graphics/">Graphics</a></li>
+                <li><a href="/experiments.html">Experiments</a></li>
+                <li><a href="/form-no-js.html">Form (no JS)</a></li>
+                <li><a href="/form-with-js.html">Form (with JS)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <hgroup>
+            <h1>Form (no JS)</h1>
+        </hgroup>
+    </main>
+
+    <footer>
+        <form action="https://httpbin.org/post" method="post">
+            <fieldset>
+                <legend>Send me a message:</legend>
+                <label for="name">Name:</label>
+                <input type="text" name="name" autocomplete="name" required minlength="1" maxlength="100">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" autocomplete="email" required>
+                <br>
+                <label for="comments">Comment:</label>
+                <textarea name="comments" required minlength="10" maxlength="1000"></textarea>
+                <br>
+                <input name="possible_bot" value="true" hidden>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </footer>
+</body>

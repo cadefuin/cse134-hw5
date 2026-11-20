@@ -1,0 +1,68 @@
+/* 
+ *  NAME: Cass Adefuin
+ *  REPOSITORY URL: https://github.com/cadefuin/cse134-hw3
+ */
+
+
+ /* --- Typography and Inheritance --- */
+ /* --- + Layout and Box Model --- */
+ body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #E09F3E;
+    line-height: 1.5rem;
+
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+ }
+
+ h1 {
+    font-size: 3rem;
+ }
+
+ /* --- Basic Selectors --- */
+ h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ .latin {
+    font-style: italic;
+ }
+
+ #warning {
+    color: white;
+    background-color: #9e2a2b;
+    padding: 1rem;
+ }
+ 
+
+ /* --- Layout and Box Model --- */
+ blockquote {
+    border-style: solid;
+    border-color: #E09F3E;
+    border-width: 1px 1px 1px 5px;
+    margin: 1rem;
+    padding: 1rem;
+ }
+
+
+ /* --- Hover and Focus --- */
+ a:hover {
+    color: #9E2A2B;
+ }
+
+a:focus, input:focus, button:focus {
+    color: #335C67;
+}
+
+
+/* --- Cascade In Action --- */
+.latin {
+    color: #540B0E;
+}
+
+.latin {
+    color: #9E2A2B;
+}
+/* The later value wins because CSS applies
+/* the last value it encounters.
