@@ -92,6 +92,7 @@ class UselessFact extends HTMLElement {
 
         this.renderFact();
         this.renderStatus();
+        this.renderControls();
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -177,6 +178,11 @@ class UselessFact extends HTMLElement {
         this.statusMessage.textContent = `Status: ${this.getAttribute('status') ?? ''}`;
     }
 
+    renderControls() {
+        const atEnd = this.current_fact === this.facts.length - 1;
+        this.nextButton.textContent = atEnd ? 'Load New Fact' : 'Next Fact';
+    }
+
     setBusy(busy) {
         this.setAttribute('aria-busy', busy ? 'true' : 'false');
         this.previousButton.disabled = busy;
@@ -194,6 +200,7 @@ class UselessFact extends HTMLElement {
             this.current_fact += 1;
             this.setAttribute('status', 'Idle');
             this.renderFact();
+            this.renderControls();
         }
     }
 
@@ -203,6 +210,7 @@ class UselessFact extends HTMLElement {
         this.current_fact = (this.current_fact - 1 + this.facts.length) % this.facts.length;
         this.setAttribute('status', 'Idle');
         this.renderFact();
+        this.renderControls();
     }
 
     /* --- Fetching --- */
@@ -257,6 +265,7 @@ class UselessFact extends HTMLElement {
             this.facts.push(text);
             this.current_fact = this.facts.length - 1;
             this.renderFact();
+            this.renderControls();
             this.setAttribute('status', 'Loaded a new fact.');
         } catch (error) {
             console.error('Error fetching a useless fact:', error);
