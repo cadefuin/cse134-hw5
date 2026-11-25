@@ -270,14 +270,30 @@ form {
 useless-fact {
     display: block;
     background-color: var(--color-4);
-    padding: 1em;
+    padding: 0.5em 1em;
     margin: 1em auto;
 
-    * {
-        padding: 0.5em 1em;
+    h2, p {
+        padding: 0 1rem;
     }
 
-    p.current-fact {
+    li {
+        list-style-type: none;
+    }
+
+    ol {
+        padding: 0;
+
+        li { padding: 1em 1em; }
+    }
+
+    menu {
+        padding: 0;
+
+        li { display: inline-block; }
+    }
+
+    li.current-fact {
         background-color: var(--color-5);
     }
 }
