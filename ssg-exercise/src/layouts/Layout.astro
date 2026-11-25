@@ -1,0 +1,41 @@
+---
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Cass Adefuin's portfolio">
+		<meta name="keywords" content="HTML">
+		<meta name="author" content="Cass Adefuin">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content={Astro.generator} />
+		<title>Cass Adefuin</title>
+		<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+		<meta name="color-scheme" content="light dark">
+		<script>
+			try {
+				const theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+				document.documentElement.dataset.theme = theme;
+				}
+			} catch { /* no storage: follow the system */ }
+		</script>
+	</head>
+
+	<body>
+		<script>
+			import '../scripts/form.js';
+			import '../scripts/theme.js';
+			import '../scripts/useless-fact.js';
+		</script>
+		<NavBar />
+		<slot />
+		<Footer />
+	</body>
+</html>

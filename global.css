@@ -53,10 +53,34 @@ body {
     line-height: 1.5;
 }
 
+main {
+    display: block;
+    margin: 3em;
+}
+
 h1 {
     font-family: var(--font-serif);
 }
 
+[role="status"] {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+button {
+    background-color: var(--color-1);
+    color: var(--text-2);
+    border: 0;
+    margin: 0.5em;
+    padding: 0 1em;
+    min-height: 3em;
+    font-family: var(--font-mono);
+}
+
+
+button:hover {
+    background-color: var(--color-2);
+}
 
 /* --- HEADER --- */
 
@@ -229,14 +253,6 @@ form {
             background-color: var(--color-green);
         }
 
-        button {
-            background-color: var(--color-1);
-            color: var(--text-2);
-            border: 0;
-            min-height: 3em;
-            font-family: var(--font-mono);
-        }
-
         p.error, p.info {
             font-size: 0.8rem;
             font-style: italic;
@@ -246,5 +262,37 @@ form {
         p.error {
             color: var(--text-1);
         }
+    }
+}
+
+
+/* --- USELESS FACT COMPONENT --- */
+useless-fact {
+    display: block;
+    background-color: var(--color-4);
+    padding: 0.5em 1em;
+    margin: 1em auto;
+
+    h2, p {
+        padding: 0 1rem;
+    }
+
+    li {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    ol {
+        padding: 0;
+
+        li { padding: 1em 1em; }
+    }
+
+    menu {
+        padding: 0;
+    }
+
+    li.current-fact {
+        background-color: var(--color-5);
     }
 }

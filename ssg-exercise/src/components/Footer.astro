@@ -1,0 +1,32 @@
+<footer>
+    <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+            <legend>Send me a message:</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" autocomplete="name" required minlength="1" maxlength="100" aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <p id="email-error" class="error" aria-live="polite"></p>
+            <br>
+            <label for="comments">Comment:</label>
+            <textarea name="comments" required minlength="10" maxlength="1000" aria-describedby="comments-error"></textarea>
+            <p id="comments-error" class="error" aria-live="polite"></p>
+            <p id="comments-info" class="info"></p>
+            <br>
+            <input name="possible_bot" value="true" hidden>
+            <input name="form-errors" hidden>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset data-theme-switch hidden>
+            <legend>Theme</legend>
+            <label><input type="radio" name="theme" value="system" checked> System</label>
+            <label><input type="radio" name="theme" value="light"> Light</label>
+            <label><input type="radio" name="theme" value="dark"> Dark</label>
+        </fieldset>
+    </form>
+</footer>
